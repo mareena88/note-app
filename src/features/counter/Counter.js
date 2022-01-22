@@ -7,12 +7,14 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
+  getIdea,
 } from './counterSlice';
 import styles from './Counter.module.css';
 
 export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
+  const ideaRedux = useSelector(getIdea);
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
@@ -28,6 +30,7 @@ export function Counter() {
           -
         </button>
         <span className={styles.value}>{count}</span>
+        <p>{ideaRedux}</p>
         <button
           className={styles.button}
           aria-label="Increment value"
