@@ -1,9 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getMockData } from '../../features/counter/counterSlice'
+import { getMockData, getMockDataTwo } from '../../features/counter/counterSlice'
 
 const TableRow = () => {
  const mockDataRedux = useSelector(getMockData);
+ const mockDataTwoRedux = useSelector(getMockData);
  const pageModel = (
   <>
    {mockDataRedux.map((row, index) => {

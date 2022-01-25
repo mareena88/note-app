@@ -7,17 +7,14 @@ const initialState = {
   idea: 'test note',
   mockData: [{
    rowID: 1,
-   note: 'buy milk',
+   note: 'add a note here',
   },
   {
    rowID: 2,
-   note: 'buy eggs',
+   note: 'edit a note here',
   },
-  {
-   rowID: 3,
-   note: 'buy bread',
-  }
- ]
+ ],
+ mockDataTwo: [],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -55,6 +52,12 @@ export const counterSlice = createSlice({
     },
     setIdea: (state, action) => {
      state.idea = action.payload;
+    },
+    setMockData: (state, action) => {
+     state.mockData = action.payload;
+    },
+    setMockDataTwo: (state, action) => {
+     state.mockDataTwo = action.payload;
     }
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -71,7 +74,7 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount, setIdea } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount, setIdea, setMockData, setMockDataTwo } = counterSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
@@ -80,6 +83,7 @@ export const selectCount = (state) => state.counter.value;
 export const getIdea = (state) => state.counter.idea;
 
 export const getMockData = (state) => state.counter.mockData; // to pull data 
+export const getMockDataTwo = (state) => state.counter.mockDataTwo; // to pull data 
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.
