@@ -15,8 +15,15 @@ const App = () => {
     setTask("");
   };
 
-  const handleDelete = () => {
-
+  const handleDelete = (e, taskIndex) => {
+    // debugger;
+    // e.preventDefault();
+    // const newTodoList = [...todoList];
+    // //const index = todoList.findIndex((task, index) => index === taskIndex);
+    // const index = 2;
+    // newTodoList[taskIndex].splice(index, 1);
+    // setTodoList(newTodoList);
+  
   }
   console.log(todoList);
 
