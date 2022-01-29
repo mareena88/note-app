@@ -14,7 +14,7 @@ const initialState = {
    note: 'edit a note here',
   },
  ],
- mockDataTwo: [],
+ mockDataTwo: ['Go pick up shoppingat 2pm', 'Wash the car'],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
